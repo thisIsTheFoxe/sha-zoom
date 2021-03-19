@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Match</title>
+    <link rel="stylesheet" href="audiomatch.css">
+    <script src="jquery.min.js"></script>
+    <script src="audiomatch.js?id=2"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-93M2PXG80K"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-93M2PXG80K');
+    </script>
+</head>
+
+<body>
+
+    <h1>This is a demo of how an audio match algorithm may work.</h1>
+
+    <h2>&copy; David Domminney Fowler 2021 for Computerphile</h2>
+
+    <div class="container">
+
+        <div class="spectrum"></div>
+
+    </div>
+    <h3>Audio Files (click to analyse)</h3>
+    <h4><a href="/" target="_blank">Songs by Space Potatoes from the "2020 Rendezvous" mini-series soundtrack - Click
+            here for more info</a></h4>
+
+    <div class="fullaudiofiles"></div>
+    <h3>Noiseprinted Files (click to compare)</h3>
+    <div class="noiseprints"></div>
+
+    <div class="settings">
+        <div><label>Max Points Per Slice</label><input type="number" min="3" max="20" class='maxpoints'></div>
+        <div><label>FFT Bin Start</label><input type="number" min="0" max="4096" value="4" class='startat'
+                onblur="calcFreq()"></div>
+        <div><label>FFT Bin End</label><input type="number" min="0" max="4096" value="214" class='endat'
+                onblur="calcFreq()"></div>
+        <div><label>FFT Bin Step</label><input type="number" min="0" max="50" value="1" class='freqstep'
+                onblur="calcFreq()"></div>
+
+        <div><label>Point Groups</label><input type="number" min="2" max="20" value="6" class='pointgroups'></div>
+        <div class="calcfreq"></div>
+        <button onclick="saveNoisePrint();">Save Spectrum & Stop Song</button>
+    </div>
+    <div class="output">
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    --slHeight:1px;
+}
+
+.fullaudiofiles,.noiseprints{
+    display: flex;
+    gap:2px;
+    margin-bottom: 1rem;
+}
+
+.fullaudiofile,.noiseprint{
+    padding: 10px;
+    background-color: #069;
+    color:white;
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.fullaudiofile:hover{
+    background-color: #046;
+}
+
+.noiseprint{
+    background-color:#096;
+}
+
+.noiseprint:hover{
+    background-color: #064;
+}
+
+.spectrum{
+    height:400px;
+    overflow: hidden;
+    background-color: black;
+    display: flex;
+    margin-bottom: 1rem;
+    overflow: auto;
+    flex-direction: row;
+}
+
+.spectrumline{
+    width:5px;
+    display: flex;
+    flex-direction: column-reverse;    
+    justify-content: stretch;
+}
+
+.spectrumline div{
+    flex-grow: 2;
+}
+
+.settings{
+    margin-bottom: 1rem;
+    display: flex;
+    gap:1rem;
+}
+
+.settings div{
+    display: flex;
+    flex-direction: column;
+    gap: .2rem;
+}
+
+.output div{
+    display: flex;
+    gap: 1rem;
+}
+
+.output div span{
+    width:200px;
+}
+
+.chosen{
+    color:red;
+}
+
+a{
+    color:rgb(0, 33, 49);
+    text-decoration: none;
+}
+
+h2,h4{
+    font-weight: 400;
+    margin:0 0 1rem 0;
+}
+
+h1{
+    margin-bottom: .5rem;
+    margin-top: 0;
+}
+
+h3{
+    margin: .5rem 0;
+}
